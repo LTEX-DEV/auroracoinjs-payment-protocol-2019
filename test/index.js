@@ -4,9 +4,9 @@ var chai = require('chai');
 var sinon = require('sinon');
 var should = chai.should();
 var expect = chai.expect;
-var digibyte = require('digibyte');
-var PrivateKey = digibyte.PrivateKey;
-var PublicKey = digibyte.PublicKey;
+var auroracoin = require('auroracoin');
+var PrivateKey = auroracoin.PrivateKey;
+var PublicKey = auroracoin.PublicKey;
 var KJUR = require('jsrsasign');
 
 var is_browser = process.browser;
@@ -287,7 +287,7 @@ describe('PaymentProtocol', function() {
       var paypro = new PaymentProtocol();
       paypro.makePayment();
       paypro.set('memo', 'test memo');
-      paypro.getContentType().should.equal('application/digibyte-payment');
+      paypro.getContentType().should.equal('application/auroracoin-payment');
     });
 
   });
